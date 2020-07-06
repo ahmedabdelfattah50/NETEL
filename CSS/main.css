@@ -1,0 +1,443 @@
+
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    margin: 0;
+    background: #101010;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+/* ============== Start Navbar ============== */
+
+.nav_container {
+    /* overflow: hidden; */
+}
+
+nav {
+    background:#202020;
+    border-left: 6px solid #d54ab6;
+    padding-left: 20px;
+
+    position: absolute;
+    top: 30px; 
+    
+
+    width: 50%;
+    margin-left: 24%;
+    /* margin-top: 100px; */
+    /* z-index: 3; */
+}
+
+nav ul {
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 22px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li.active {
+    background: #333;
+}
+
+nav ul li:hover {
+    color: #ffa500;
+    background:#202020;
+}
+/* ============== End Navbar ============== */
+
+/* ============== Start main ============== */
+
+main {
+    height: 600px;
+    /* background-image: url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* width: 100%; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* background: red; */
+    /* z-index: -3 !important; */
+    /* margin-top: -4px; */
+    /* margin-top: -50px; */
+}
+
+
+main .main_back {
+    background-image: url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* margin-top: -40px; */
+}
+
+main .main_back .header_main h1 {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    padding: 0 250px;
+} 
+
+/* ============== End main ============== */
+
+/* ============== Start benefits ============== */
+
+.benefits {
+    padding: 30px 0 60px;
+}
+
+.benefits .total_benefits {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    margin-top: -100px;
+}
+
+.benefits .total_benefits .item {
+    text-align: center;
+    padding: 40px 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.benefits .total_benefits .item:hover {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 30px #ddd;
+    border-radius: 10px;
+}
+
+.benefits .total_benefits .item p {
+    font-size: 17px;
+}
+
+.benefits .total_benefits .item:nth-child(1){
+    margin-right: 7%;
+    background: #c14000;
+} 
+
+.benefits .total_benefits .item:nth-child(2){
+    margin-right: 3.5%;
+    margin-left: 3.5%;
+    background: #009988;
+} 
+
+.benefits .total_benefits .item:nth-child(3){
+    margin-left: 7%;
+    background: #ffa500;
+} 
+
+.benefits .item .icon_div {
+    height: 100px;
+    width: 100px;
+    margin-left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.benefits .item .benefit_icon {
+    font-size: 35px;
+}
+/* ============== End benefits ============== */
+
+/* ============== Start StartUp ============== */
+
+.startup .total_startup {
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+}
+
+.startup .total_startup .start_left img {
+    width: 100%;
+}
+
+.startup .total_startup .start_left {
+    background: red;
+    background-image: url(../images/about-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.startup .total_startup .start_right {
+    background: #1c1c1c;
+    padding: 30px;
+}
+
+.startup .total_startup .start_right h2 {
+    font-size: 30px;
+}
+
+.startup .total_startup .start_right p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #808080;
+}
+
+.startup .total_startup .start_right button {
+    padding: 10px 20px;
+    border:2px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 750;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.startup .total_startup .start_right button:hover {
+    background: #009988;
+    color: #000;
+    border: 2px solid #009988;
+}
+
+/* ============== End StartUp ============== */
+
+/* ============== Start recent_projects ============== */
+.recent_projects {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.recent_projects p {
+    padding: 0 100px;
+    line-height: 30px;
+    color: #808080;
+}
+
+.recent_projects .total_firstProject {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    padding-top: 40px;
+}
+
+.recent_projects .total_firstProject img {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.recent_projects .total_firstProject img:hover {
+    opacity: 1;
+}
+
+.recent_projects .total_secondProject {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    padding-bottom: 40px;
+}
+
+.recent_projects .total_secondProject img {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.recent_projects .total_secondProject img:hover {
+    opacity: 1;
+}
+
+.recent_projects button {
+    padding: 10px 20px;
+    border:2px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 750;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.recent_projects button:hover {
+    background: #009988;
+    color: #000;
+    border: 2px solid #009988;
+}
+/* ============== End recent_projects ============== */
+
+/* ============== Start info ============== */
+
+.info {
+    background: #1c1c1c;
+    padding: 40px 0;
+}
+
+.info .total_info {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.3fr;
+}
+
+.info .item ul {
+    padding: 0;
+}
+
+.info .item ul li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.info .item p {
+    color: #808080;
+    font-size: 15px;
+    line-height: 25px;
+} 
+
+.info .item:nth-child(1) p {
+    padding: 0 20px 0 0;
+}
+
+.info .item span {
+    color: #808080;
+    font-size: 17px;
+} 
+
+.item .info_icon {
+    color: #808080;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.item:nth-child(2) ul li a {
+    text-decoration: none;
+    color: #808080;
+    position: relative;
+}
+
+.item:nth-child(2) ul li a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #fff;
+    left: 0;
+    top: 120%;
+    transition: 0.3s ease-in-out;
+}
+
+.item:nth-child(2) ul li a:hover::after {
+    width: 100%;
+}
+.item:nth-child(3) input[type='text'] {
+    border: 2px solid #fff;
+    background: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.item:nth-child(3) input[type='text']::placeholder {
+    color: #fff;
+}
+
+.item:nth-child(3) input[type='text']:focus {
+   background: #806040;
+   border: 2px solid #806040;
+   box-shadow: 0 0 10px #ddd;
+   border-radius: 5px;
+}
+
+.item:nth-child(3) input[type='text']:hover {
+    background: #806040;
+    border: 2px solid #806040;
+}
+
+.item:nth-child(3) input[type='submit'] {
+    padding: 10px 20px;
+    border:2px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.item:nth-child(3) input[type='submit']:hover {
+    background: #009988;
+    color: #000;
+    border: 2px solid #009988;
+}
+
+/* ============== End info ============== */
+/* ============== Start footer ============== */
+
+footer {
+    padding: 10px 0;
+}
+
+footer ul {
+    float: right;
+    margin-top: -50px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+footer ul li:hover {
+    background: #d54ab6;
+} 
+
+footer ul li:hover .footer_icon {
+    color: #fff;
+}
+
+footer p {
+    color: #808080;
+}
+
+footer ul li .footer_icon {
+    font-size: 20px;
+    font-size: 30px;
+    color: #909090;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* ============== End footer ============== */
