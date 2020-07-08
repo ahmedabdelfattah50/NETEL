@@ -1,4 +1,5 @@
-
+/* Extra large devices (large desktops) 
+   No media query since the extra-large breakpoint has no upper bound on its width */
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
@@ -16,10 +17,6 @@ body {
 
 /* ============== Start Navbar ============== */
 
-.nav_container {
-    /* overflow: hidden; */
-}
-
 nav {
     background:#202020;
     border-left: 6px solid #d54ab6;
@@ -27,12 +24,8 @@ nav {
 
     position: absolute;
     top: 30px; 
-    
-
     width: 50%;
     margin-left: 24%;
-    /* margin-top: 100px; */
-    /* z-index: 3; */
 }
 
 nav ul {
@@ -44,7 +37,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     list-style: none;
-    padding: 22px 20px;
+    padding: 22px 15px;
     color: #fff;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -64,24 +57,14 @@ nav ul li:hover {
 
 main {
     height: 600px;
-    /* background-image: url(../images/home-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* width: 100%; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* background: red; */
-    /* z-index: -3 !important; */
-    /* margin-top: -4px; */
-    /* margin-top: -50px; */
 }
-
 
 main .main_back {
     background-image: url(../images/home-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
     height: 100%;
     width: 100%;
     margin-top: 80px;
@@ -89,7 +72,6 @@ main .main_back {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* margin-top: -40px; */
 }
 
 main .main_back .header_main h1 {
@@ -102,7 +84,6 @@ main .main_back .header_main h1 {
 /* ============== End main ============== */
 
 /* ============== Start benefits ============== */
-
 .benefits {
     padding: 30px 0 60px;
 }
@@ -169,12 +150,7 @@ main .main_back .header_main h1 {
     grid-template-columns: repeat(2 ,1fr);
 }
 
-.startup .total_startup .start_left img {
-    width: 100%;
-}
-
 .startup .total_startup .start_left {
-    background: red;
     background-image: url(../images/about-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -303,7 +279,7 @@ main .main_back .header_main h1 {
 
 .info .item p {
     color: #808080;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 25px;
 } 
 
@@ -430,7 +406,6 @@ footer p {
 }
 
 footer ul li .footer_icon {
-    font-size: 20px;
     font-size: 30px;
     color: #909090;
     position: absolute;
@@ -441,3 +416,597 @@ footer ul li .footer_icon {
 }
 
 /* ============== End footer ============== */
+
+/* ============== Start Responsive ============== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  
+    .container {
+        width: 850px;
+    }
+
+    /* ============== Start Navbar ============== */
+    nav {
+        width: 60%;
+        margin-left: 19%;
+    }
+    /* ============== End Navbar ============== */
+
+    /* ============== Start main ============== */
+    main .main_back .header_main h1 {
+        font-size: 40px;
+        padding: 0 200px;
+    } 
+    /* ============== End main ============== */
+
+    /* ============== Start benefits ============== */
+
+    .benefits { 
+        padding: 30px 0 40px;
+    }
+
+    .benefits .total_benefits .item {
+        padding: 25px 20px;
+    }
+
+    .benefits .item .icon_div {
+        margin-left: 27%;
+    }
+    /* ============== End benefits ============== */
+
+    /* ============== Start StartUp ============== */
+    .startup .total_startup .start_right {
+        padding: 10px 20px 10px 30px;
+    }
+
+    .startup .total_startup .start_right h2 {
+        font-size: 27px;
+        margin: 10px 0 20px;
+    }
+
+    .startup .total_startup .start_right p {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    .startup .total_startup .start_right .startUpSepPara1 {
+        margin-bottom: 7px;
+    }
+
+    .startup .total_startup .start_right .startUpSepPara2 { 
+        margin-top: 7px;
+    }
+
+    .startup .total_startup .start_right button {
+        font-size: 13px;
+        margin: 0px 0 10px;
+    }
+    /* ============== End StartUp ============== */
+
+    /* ============== Start recent_projects ============== */
+    .recent_projects button {
+        margin-top: 0px;
+    }
+    /* ============== End recent_projects ============== */
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    .container {
+        width: 720px;
+    }
+    /* ============== Start Navbar ============== */
+    nav {
+        width: 80%;
+        margin-left: 8%;
+    }
+    /* ============== End Navbar ============== */
+    /* ============== Start main ============== */
+    main {
+        height: 500px;
+    }
+    main .main_back .header_main h1 {
+        font-size: 35px;
+        padding: 0 200px;
+    } 
+    /* ============== End main ============== */
+    /* ============== Start benefits ============== */
+    .benefits {
+        padding: 30px 0 50px;
+    }
+
+    .benefits .total_benefits {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .benefits .total_benefits .item p {
+        font-size: 20px;
+    }
+
+    .benefits .total_benefits .item:nth-child(1){
+        margin-right: 3.5%;
+    } 
+
+    .benefits .total_benefits .item:nth-child(2){
+        margin-right: 0%;
+        margin-left: 3.5%;
+    } 
+
+    .benefits .total_benefits .item:nth-child(3){
+        margin-left: 0%;
+        margin-top: 7%;
+        width: 189%;
+        padding: 30px 20px 20px;
+    } 
+
+    .benefits .total_benefits .item:nth-child(3):hover {
+        margin-top: 25.1px;
+        margin-bottom: 0px;
+    }
+
+    .benefits .item .icon_div {
+        margin-left: 33%;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) .icon_div {
+        margin-left: 42%;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) .icon_div .benefit_icon {
+        font-size: 40px;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) h2 {
+        font-size: 30px;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) p {
+        line-height: 30px;
+    }
+    /* ============== End benefits ============== */
+
+    /* ============== Start recent_projects ============== */
+    .recent_projects {
+        padding: 10px 0 20px;
+    }
+    
+    .recent_projects .total_firstProject {
+        padding-top: 20px;
+    }
+
+    .recent_projects .total_secondProject {
+        padding-bottom: 20px;
+    }
+
+    .recent_projects button {
+        margin-top: 20px;
+    }
+
+    /* ============== End recent_projects ============== */
+
+    /* ============== Start info ============== */
+
+    .info {
+        padding: 10px 0;
+    }
+
+    .info .total_info {
+        grid-template-columns: 1.5fr 0.8fr 1fr;
+    }
+
+    .item:nth-child(3) input[type='text'] {
+        width: 90%;
+    }
+    /* ============== End info ============== */
+    /* ============== Start footer ============== */
+
+    footer {
+        padding: 0;
+    }
+
+    footer ul {
+        margin: 0px;
+        margin-top: -30px;
+    }
+
+    footer ul li {
+        width: 40px;
+        height: 40px;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+
+    footer ul li .footer_icon {
+        font-size: 20px;
+    }
+    /* ============== End footer ============== */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .container {
+        width: 95%;
+    }
+    /* ============== Start Navbar ============== */
+    nav {
+        width: 83%;
+        margin-left: 8%;
+        padding-left: 0;
+    }    
+
+    nav span {
+        display: flex;
+        float: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    /* ============== End Navbar ============== */
+    /* ============== Start main ============== */
+    main {
+        height: 500px;
+    }
+    main .main_back .header_main h1 {
+        font-size: 35px;
+        padding: 0 100px;
+        line-height: 40px;
+    } 
+    /* ============== End main ============== */
+
+    /* ============== Start benefits ============== */
+    .benefits {
+        padding: 30px 0 50px;
+    }
+
+    .benefits .total_benefits {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .benefits .total_benefits .item {
+        padding: 20px;
+        width: 80%;
+    }
+
+    .benefits .total_benefits .item:hover {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .benefits .total_benefits .item h2 {
+        font-size: 28px;
+        margin: 18px 0;
+    }
+
+    .benefits .total_benefits .item p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .benefits .total_benefits .item:nth-child(1){
+        margin-right: 0%;
+        margin-bottom: 30px;
+    } 
+
+    .benefits .total_benefits .item:nth-child(2){
+        margin-right: 0%;
+        margin-left: 0%;
+
+        margin-bottom: 30px;
+    } 
+
+    .benefits .total_benefits .item:nth-child(3){
+        width: 80%;
+        margin: 0;
+        transition: 0s;
+    } 
+
+    .benefits .item span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .benefits .item .icon_div {
+        margin: 0;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) .icon_div {
+        margin: 0;
+    }
+    
+    .benefits .item .benefit_icon {
+        font-size: 37px;
+    }
+
+    .benefits .total_benefits .item:nth-child(3):hover {
+        margin: 0;
+    }
+
+    .benefits .total_benefits .item:nth-child(3) h2 {
+        font-size: 28px;
+    }
+
+    /* ============== End benefits ============== */
+
+    /* ============== Start StartUp ============== */
+
+    .startup .total_startup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .startup .total_startup .start_left {
+        height: 394.6px;
+        width: 86%;
+    }
+
+    .startup .total_startup .start_right {
+        padding: 30px;
+        margin-top: -170px;
+    }
+
+    .startup .total_startup .start_right h2 {
+        font-size: 30px;
+    }
+
+    .startup .total_startup .start_right p {
+        font-size: 18px;
+        line-height: 25px;
+    } 
+
+    .startup .total_startup .start_right button {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    /* ============== End StartUp ============== */
+
+    /* ============== Start recent_projects ============== */
+    .recent_projects {
+        padding: 10px 0 20px;
+    }
+    
+    .recent_projects .total_firstProject {
+        padding-top: 20px;
+    }
+
+    .recent_projects .total_secondProject {
+        padding-bottom: 20px;
+    }
+
+    .recent_projects button {
+        margin-top: 20px;
+    }
+
+    .recent_projects p {
+        padding: 0 70px;
+    }
+
+    .recent_projects .total_projects {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .recent_projects .total_firstProject {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+
+    .recent_projects .total_secondProject {
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        padding-bottom: 0px;
+        padding-top: 20px;
+    }
+    /* ============== End recent_projects ============== */
+
+    /* ============== Start info ============== */
+    .info .total_info {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    /* ============== End info ============== */
+
+    /* ============== Start footer ============== */
+    footer {
+        padding: 0;
+        text-align: center;
+    }
+
+    footer span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ul {
+        margin: 0px;
+        margin-top: 20px;
+    }
+    /* ============== End footer ============== */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .container {
+        width: 95%;
+        /* background-color: green; */
+    }
+    /* ============== Start Navbar ============== */
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul li:hover {
+        padding-left: 40px;
+    }
+
+    nav:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+    /* ============== End Navbar ============== */
+    /* ============== Start main ============== */
+    main {
+        height: 470px;
+    }
+
+    main .main_back .header_main h1 {
+        font-size: 30px;
+        padding: 0 7%;
+        line-height: 40px;
+    } 
+    /* ============== End main ============== */
+
+    /* ============== Start benefits ============== */
+    .benefits {
+        padding: 30px 0 30px;
+    }
+
+    .benefits .total_benefits .item {
+        padding: 20px 10px;
+        width: 90%;
+    }
+
+    .benefits .total_benefits .item h2 {
+        font-size: 25px;
+    }
+
+    .benefits .total_benefits .item p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .benefits .total_benefits .item:nth-child(1){
+        margin-bottom: 20px;
+    } 
+
+    .benefits .total_benefits .item:nth-child(2){
+        margin-bottom: 20px;
+    } 
+
+    .benefits .total_benefits .item:nth-child(3){
+        padding: 20px 10px;
+        width: 90%;
+    } 
+
+    .benefits .total_benefits .item:nth-child(3) h2 {
+        font-size: 25px;
+    }
+    /* ============== End benefits ============== */
+
+    /* ============== Start StartUp ============== */
+
+    .startup .total_startup .start_left {
+        width: 90%;
+        background-position: bottom center;
+    }
+
+    .startup .total_startup .start_right {
+        padding: 20px;
+        margin-top: -170px;
+    }
+
+    .startup .total_startup .start_right h2 {
+        font-size: 25px;
+    }
+
+    .startup .total_startup .start_right p {
+        font-size: 18px;
+        line-height: 28px;
+    } 
+
+    .startup .total_startup .start_right button {
+        font-size: 12px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    /* ============== End StartUp ============== */
+
+    /* ============== Start recent_projects ============== */
+    .recent_projects {
+        padding: 10px 0 15px;
+    }
+
+    .recent_projects button {
+        margin-top: 10px;
+    }
+
+    .recent_projects p {
+        padding: 0 5px;
+    }
+    .recent_projects .total_firstProject {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .recent_projects .total_secondProject {
+        grid-template-columns: repeat(1 ,1fr);
+    }
+    /* ============== End recent_projects ============== */
+
+    /* ============== Start info ============== */
+    .info {
+        padding: 10px 7px;
+    }
+    .info .total_info {
+        grid-template-columns: repeat(1,1fr);
+    }
+    /* ============== End info ============== */
+
+    /* ============== Start footer ============== */
+    footer {
+        padding: 0;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    footer ul {
+        margin: 0px;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer ul li {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    footer ul li .footer_icon {
+        font-size: 17px;
+    }
+    /* ============== End footer ============== */
+
+}
+
+
+
+
+
+
+
+
+
